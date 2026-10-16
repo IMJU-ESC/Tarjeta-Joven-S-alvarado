@@ -1,0 +1,182 @@
+"use client";
+import React from "react";
+import { MUNICIPIO, PROGRAMA_ACTIVO } from "@/lib/municipio";
+import Link from "next/link";
+
+export default function AvisoDePrivacidad() {
+  return (
+    <main className="min-h-screen bg-[#F3F5F9] font-sans selection:bg-[#85033e] selection:text-white py-12 px-4 md:px-8">
+      <div className="max-w-4xl mx-auto">
+        
+        {/* ENCABEZADO INSTITUCIONAL */}
+        <div className="flex flex-col items-center mb-10 text-center animate-fade-in">
+          <div className="w-20 h-20 bg-white rounded-2xl shadow-lg border border-slate-100 flex items-center justify-center mb-6 p-2">
+            <img src="/imju-salvador-alvarado.jpg" alt="IMJU Salvador Alvarado" className="w-full h-full object-contain" />
+          </div>
+          <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-2">Términos, Condiciones y Aviso de Privacidad Integral</h1>
+          <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">Instituto Municipal de la Juventud de Salvador Alvarado</p>
+          <p className="text-xs text-slate-400 mt-2">Última actualización: 15 de octubre de 2026</p>
+        </div>
+
+        {!PROGRAMA_ACTIVO && <div className="mb-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-950"><strong>Versión preparatoria.</strong> El programa aún no abre registros. El instituto deberá completar sus datos de atención y validar este aviso antes de iniciar operaciones.</div>}
+        {/* CONTENIDO LEGAL */}
+        <div className="bg-white rounded-[2.5rem] shadow-xl border border-slate-100 p-8 md:p-12 space-y-8 text-slate-700 leading-relaxed text-[15px] animate-slide-up">
+
+          <section>
+            <h2 className="text-xl font-black text-[#85033e] mb-4 uppercase tracking-widest border-b border-slate-100 pb-2">1. Identidad, Domicilio y Declaración General</h2>
+            <p className="mb-4">
+              El <strong>Instituto Municipal de la Juventud (IMJU) de Salvador Alvarado, Sinaloa</strong>, con domicilio en <strong>{MUNICIPIO.domicilio}</strong>, es el Sujeto Obligado y responsable del uso, protección y tratamiento de los datos personales recabados a través de la plataforma digital "Tarjeta Joven Salvador Alvarado".
+            </p>
+            <p>
+              El objetivo rector de esta plataforma gubernamental es fomentar la participación juvenil, el desarrollo económico local y la integración social. La plataforma opera <strong>estrictamente como un canal de intermediación y difusión digital gratuita</strong> entre las juventudes de Salvador Alvarado y el sector comercial privado (negocios aliados).
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-black text-[#85033e] mb-4 uppercase tracking-widest border-b border-slate-100 pb-2">2. Fundamento Legal</h2>
+            <p className="mb-4">
+              El tratamiento de datos personales se rige por la <strong>Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados</strong>, la legislación aplicable del Estado de Sinaloa y las atribuciones del Instituto Municipal de la Juventud para ejecutar políticas públicas, observando los principios de licitud, finalidad, lealtad, consentimiento, calidad, proporcionalidad, información y responsabilidad.
+            </p>
+            <p>
+              La operación y comunicación del programa también observará el artículo 134 de la Constitución Política de los Estados Unidos Mexicanos y las disposiciones electorales aplicables, incluidas las reglas relativas a imparcialidad, propaganda gubernamental, promoción personalizada y uso de programas sociales contenidas en la Ley General de Instituciones y Procedimientos Electorales.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 border-b border-slate-100 pb-2 text-xl font-black uppercase tracking-widest text-[#85033e]">3. Neutralidad Política-Electoral y No Condicionamiento</h2>
+            <ul className="list-disc space-y-3 pl-6 font-medium">
+              <li>La Tarjeta Joven Salvador Alvarado no pertenece ni beneficia a partido, candidatura, coalición, persona aspirante o persona servidora pública.</li>
+              <li>Nadie puede solicitar voto, apoyo, afiliación, datos políticos, asistencia a actos, fotografías, publicaciones en redes o cualquier contraprestación para registrar, aprobar, conservar o utilizar la tarjeta y sus beneficios.</li>
+              <li>Los datos personales, padrones, QR, métricas y canales de contacto no podrán utilizarse para segmentación, encuestas, movilización, propaganda o comunicación político-electoral.</li>
+              <li>Los negocios aliados no podrán presentar descuentos, empleos o promociones como recompensa o incentivo electoral ni condicionar su entrega por motivos políticos.</li>
+              <li>Los avisos del sistema deberán ser institucionales, informativos y sin nombres, imágenes, voces, lemas o símbolos que impliquen promoción personalizada o partidista.</li>
+              <li>Durante los periodos electorales, la difusión institucional se ajustará, limitará o suspenderá en los casos y plazos exigidos por la autoridad y la normativa aplicable.</li>
+            </ul>
+            <p className="mt-4 text-sm text-slate-600">El contenido contrario a estas reglas podrá retirarse y la cuenta responsable podrá suspenderse, previa revisión institucional y sin perjuicio de las denuncias o responsabilidades que correspondan.</p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-black text-[#85033e] mb-4 uppercase tracking-widest border-b border-slate-100 pb-2">4. Datos Recabados y Finalidad (Jóvenes Beneficiarios)</h2>
+            <p className="mb-4">Para la inscripción al padrón del programa Tarjeta Joven, el IMJU solicitará y someterá a tratamiento los siguientes datos:</p>
+            <ul className="list-disc pl-6 mb-4 space-y-2 font-medium">
+              <li>Nombre completo.</li>
+              <li>Fecha de nacimiento y edad exacta.</li>
+              <li>Género y, cuando el canal de alta lo requiera, ocupación actual.</li>
+              <li>Cuando el canal de alta lo requiera, localidad o colonia de residencia.</li>
+              <li>Correo electrónico de contacto.</li>
+            </ul>
+            <div className="bg-stone-50 border-l-4 border-stone-500 p-4 rounded-r-xl mb-4 text-slate-800 text-sm font-medium">
+              <strong>Tratamiento de Fotografía e Identificación:</strong> Se recabará una fotografía del rostro del solicitante y una imagen o archivo de un documento idóneo (por ejemplo, INE, acta de nacimiento o credencial escolar). Debido al riesgo que representa su exposición, tendrán manejo restringido y se utilizarán únicamente para corroborar la elegibilidad de 12 a 29 años, prevenir suplantaciones y emitir la credencial digital personalizada. <u>No se usarán</u> para reconocimiento facial automatizado ni se expondrán en directorios públicos.
+            </div>
+            <p>
+              La información recabada servirá para generar un expediente electrónico, llevar un control estadístico disociado de impacto demográfico municipal y mantener comunicación institucional sobre el programa. No será comercializada, alquilada ni utilizada para finalidades incompatibles; cualquier acceso limitado por negocios aliados se sujetará estrictamente a lo previsto en la sección 8.
+            </p>
+          </section>
+
+          <section className="rounded-[2rem] border border-violet-200 bg-violet-50/70 p-6 md:p-8">
+            <h2 className="mb-4 border-b border-violet-200 pb-2 text-xl font-black uppercase tracking-widest text-violet-800">5. Registro de Personas Menores de Edad</h2>
+            <p className="mb-4">
+              Las personas de <strong>12 a 17 años</strong> sólo podrán registrarse con el conocimiento y la autorización expresa de su madre, padre o persona tutora. El formulario solicitará el parentesco, una fotografía de la credencial de quien autoriza y una aceptación específica de estos Términos, Condiciones y Aviso de Privacidad.
+            </p>
+            <ul className="list-disc space-y-3 pl-6 font-medium">
+              <li>La credencial se utiliza exclusivamente para comprobar la identidad y la autorización durante la revisión de la solicitud. No se incorpora a la tarjeta digital ni se comparte con negocios aliados.</li>
+              <li>Al aprobar o rechazar la solicitud, el sistema elimina la credencial del almacenamiento operativo. Sólo conserva el parentesco, la fecha, la versión aceptada y la constancia de que la autorización fue verificada.</li>
+              <li>La madre, el padre o la persona tutora podrá ejercer los derechos que correspondan en representación de la persona menor, acreditando su identidad y representación ante el IMJU.</li>
+              <li>Si no se cuenta con la autorización indicada, no deberá enviarse la solicitud.</li>
+            </ul>
+          </section>
+
+          <section className="rounded-[2rem] border border-slate-200 bg-slate-50 p-6 md:p-8">
+            <h2 className="mb-4 border-b border-slate-200 pb-2 text-xl font-black uppercase tracking-widest text-[#85033e]">6. Conservación y Eliminación de Evidencias de Validación</h2>
+            <p className="mb-4">
+              Los documentos de identidad enviados por jóvenes, las credenciales de madres, padres o personas tutoras y las fotografías de fachada proporcionadas por los negocios se utilizarán <strong>únicamente para revisar y resolver la solicitud de registro</strong>. Permanecerán en almacenamiento restringido mientras la solicitud tenga el estado de pendiente.
+            </p>
+            <ul className="list-disc space-y-3 pl-6 font-medium">
+              <li>Al aprobar una solicitud, el sistema elimina del almacenamiento operativo el documento de identidad, la credencial del tutor o la evidencia de fachada y retira sus enlaces del expediente activo.</li>
+              <li>Al rechazar una solicitud, se elimina la evidencia de validación y también los archivos asociados a la solicitud rechazada, incluyendo fotografía de perfil o logotipo, al no existir una cuenta activa que justifique su conservación.</li>
+              <li>La fotografía de perfil del joven y el logotipo del negocio sólo se conservan cuando la solicitud es aprobada, pues son necesarios para identificar la tarjeta digital y el perfil público del comercio.</li>
+              <li>Las evidencias de validación no se utilizarán con fines publicitarios, comerciales, de reconocimiento facial ni para finalidades distintas a comprobar los requisitos del programa.</li>
+            </ul>
+          </section>
+
+          <section className="bg-teal-50/70 p-6 md:p-8 rounded-[2rem] border border-teal-200 shadow-sm">
+            <h2 className="text-xl font-black text-[#85033e] mb-4 uppercase tracking-widest border-b border-teal-200 pb-2">7. Obligaciones y Responsabilidad de Negocios Aliados</h2>
+            <p className="mb-4 font-bold text-teal-950">
+              Al registrarse y utilizar el "Portal de Negocios", el propietario, administrador o representante del establecimiento declara conocer y aceptar las siguientes obligaciones y delimitaciones de responsabilidad:
+            </p>
+            <ul className="list-disc pl-6 space-y-3 font-medium text-teal-900 leading-relaxed">
+              <li>
+                <strong>Ausencia de Vínculo Comercial:</strong> La plataforma funciona exclusivamente como una cartelera digital. El IMJU y el H. Ayuntamiento de Salvador Alvarado <strong>NO son socios, intermediarios mercantiles, fiadores ni representantes</strong> de las marcas, productos o servicios anunciados.
+              </li>
+              <li>
+                <strong>Responsabilidad frente al consumidor:</strong> El Negocio Aliado es responsable, conforme a la legislación aplicable, de respetar precios, descuentos, vigencias, condiciones y restricciones publicadas. El IMJU no vende los bienes o servicios ni garantiza su calidad; las reclamaciones comerciales deberán dirigirse primero al establecimiento, sin limitar los derechos que correspondan a la persona consumidora.
+              </li>
+              <li>
+                <strong>Vacantes y relación laboral:</strong> Toda vacante es publicada y gestionada por el empleador indicado. El IMJU no contrata, selecciona ni asume la calidad de patrón. Las personas conservan íntegros sus derechos para acudir ante las autoridades competentes por salarios, seguridad social, discriminación, riesgos de trabajo o cualquier otra controversia.
+              </li>
+              <li>
+                <strong>Revisión y suspensión:</strong> Ante incumplimientos, reportes fundamentados, contenido ilícito o uso político-electoral, el IMJU podrá retirar publicaciones y suspender o cancelar el acceso, documentando la decisión y respetando las garantías y medios de aclaración que resulten aplicables.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-black text-[#85033e] mb-4 uppercase tracking-widest border-b border-slate-100 pb-2">8. Acceso Limitado y Transferencia de Datos Personales</h2>
+            <p className="mb-4">
+              Para aplicar un beneficio, un Negocio Aliado con sesión activa podrá escanear el QR y visualizar temporalmente sólo la información mínima necesaria para confirmar la identidad y vigencia de la tarjeta: <strong>nombre, fotografía, nivel y, en su caso, un indicador de cumpleaños</strong>. El negocio no recibe correo, domicilio, género, fecha completa de nacimiento ni documentos de validación.
+            </p>
+            <p>
+              El historial comercial utiliza un identificador interno y conserva únicamente el negocio, la fecha y el beneficio aplicado; los reportes del negocio no muestran el nombre ni datos demográficos del joven. No se autoriza al negocio a copiar, reutilizar o transferir la información mostrada. Fuera de esta validación limitada, no se compartirán datos con empresas privadas, salvo requerimiento debidamente fundado de una autoridad competente.
+            </p>
+            <p className="mt-4">
+              El directorio público de comercios muestra exclusivamente los datos necesarios para localizar y reconocer a un aliado: nombre comercial, giro, horario, teléfono de contacto, ubicación aproximada, logotipo y, cuando exista, menú o material promocional. El correo de acceso, identificadores internos y evidencias de validación no forman parte del directorio público.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-black text-[#85033e] mb-4 uppercase tracking-widest border-b border-slate-100 pb-2">9. Uso de Cupones y Registro de Visitas</h2>
+            <p className="mb-4">
+              Consultar un cupón, abrir sus indicaciones o mostrar su código QR <strong>no lo consume automáticamente</strong>. El beneficio sólo se registra cuando un Negocio Aliado con sesión activa escanea el código y confirma la operación. Antes de mostrarlo, la plataforma informa la vigencia, los días aplicables, el establecimiento, su ubicación, las condiciones publicadas y si el beneficio es de uso único o requiere visitas previas.
+            </p>
+            <p>
+              Para prevenir duplicidades y elaborar estadísticas disociadas se conserva un registro técnico de la fecha, el comercio, el identificador interno de la tarjeta y el beneficio aplicado. Los negocios reciben únicamente resultados agregados o identificadores anonimizados para conocer el uso de sus promociones.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-black text-[#85033e] mb-4 uppercase tracking-widest border-b border-slate-100 pb-2">10. Ejercicio de Derechos ARCO</h2>
+            <p className="mb-4">
+              Usted tiene derecho a conocer los datos personales que tratamos (Acceso); solicitar su corrección cuando sean inexactos o estén desactualizados (Rectificación); pedir su cancelación cuando resulte procedente conforme a los plazos y excepciones legales; y oponerse a determinados tratamientos (Oposición).
+            </p>
+            <p>
+              Para ejercer cualquiera de los derechos ARCO, el titular podrá presentar su solicitud por escrito en las oficinas del Instituto Municipal de la Juventud de Salvador Alvarado, ubicadas en {MUNICIPIO.domicilio}, o enviarla al correo <strong>{MUNICIPIO.contacto || "Correo institucional por confirmar antes de la apertura"}</strong>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-black text-[#85033e] mb-4 uppercase tracking-widest border-b border-slate-100 pb-2">11. Aceptación Informada, Cambios y Contacto</h2>
+            <p className="mb-4">
+              La aceptación se recaba mediante una casilla expresa antes de enviar el registro. El sistema conserva la fecha y la versión aceptada para fines de trazabilidad. La simple visita a una página pública no sustituye esta manifestación de consentimiento.
+            </p>
+            <p className="mb-4">
+              Las modificaciones sustanciales a las finalidades, al tratamiento de datos, a las reglas de neutralidad o al registro de menores se comunicarán por los medios institucionales disponibles y, cuando corresponda, se solicitará una nueva aceptación.
+            </p>
+            <p>
+              Para dudas, aclaraciones, reportes de condicionamiento político-electoral o ejercicio de derechos, la persona interesada puede acudir al domicilio señalado en este aviso o escribir a <strong>{MUNICIPIO.contacto || "Correo institucional por confirmar antes de la apertura"}</strong>. Ningún reporte afectará el acceso legítimo a los beneficios del programa.
+            </p>
+          </section>
+
+        </div>
+
+        {/* BOTÓN VOLVER */}
+        <div className="mt-10 text-center pb-8">
+          <Link href="/">
+            <button className="bg-slate-900 hover:bg-[#85033e] text-white px-10 py-4 rounded-2xl font-black text-[11px] uppercase tracking-widest shadow-xl hover:shadow-2xl transition-all active:scale-95 border border-transparent hover:border-teal-900/50">
+              ← Volver al Inicio
+            </button>
+          </Link>
+        </div>
+      </div>
+    </main>
+  );
+}
